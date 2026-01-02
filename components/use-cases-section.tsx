@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Video, Youtube, Briefcase, GraduationCap, Radio } from "lucide-react"
+import { Video, Youtube, Briefcase, GraduationCap, Radio, Presentation } from "lucide-react"
 
 export function UseCasesSection() {
   const useCases = [
@@ -30,6 +30,11 @@ export function UseCasesSection() {
       title: "Live Streaming",
       description: "Engage chat while reading sponsor messages",
     },
+    {
+      icon: Presentation,
+      title: "Investor Pitches",
+      description: "Nail your funding presentation every time",
+    },
   ]
 
   return (
@@ -55,9 +60,7 @@ export function UseCasesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/[0.07] transition-colors ${
-                index === 3 || index === 4 ? "lg:col-span-1" : ""
-              }`}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/[0.07] transition-colors"
             >
               <div className="w-12 h-12 bg-[#22c55e]/10 rounded-xl flex items-center justify-center mb-4">
                 <useCase.icon className="w-6 h-6 text-[#22c55e]" />

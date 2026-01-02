@@ -95,7 +95,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Kyuva overlay demonstration */}
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1a1a1a]/90 backdrop-blur-xl border border-white/10 rounded-lg px-4 py-3 max-w-xs">
+                <div className="absolute top-8 left-1/2 -translate-x-1/2 z-10 bg-[#1a1a1a]/90 backdrop-blur-xl border border-white/10 rounded-lg px-4 py-3 max-w-xs">
                   <p className="text-sm text-white/90 leading-relaxed">
                     {"Welcome to our Q3 earnings call. I'm excited to share..."}
                   </p>

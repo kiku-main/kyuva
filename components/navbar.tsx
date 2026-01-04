@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
+const DMG_DOWNLOAD_URL = "https://github.com/KikuAI-Lab/kyuva/releases/latest/download/Kyuva-1.0.0.dmg"
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -25,9 +27,8 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -47,8 +48,11 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-medium px-5 py-2 rounded-lg">
-              Download Free
+            <Button
+              className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-medium px-5 py-2 rounded-lg"
+              asChild
+            >
+              <a href={DMG_DOWNLOAD_URL}>Download Free</a>
             </Button>
           </div>
 
@@ -76,8 +80,11 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-medium w-full mt-2">
-                Download Free
+              <Button
+                className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-medium w-full mt-2"
+                asChild
+              >
+                <a href={DMG_DOWNLOAD_URL}>Download Free</a>
               </Button>
             </div>
           </div>

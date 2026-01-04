@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Apple, Monitor, Smartphone, Chrome } from "lucide-react"
+import { Apple } from "lucide-react"
+
+const DMG_DOWNLOAD_URL = "https://github.com/KikuAI-Lab/kyuva/releases/latest/download/Kyuva-1.0.0.dmg"
 
 export function FinalCTASection() {
   return (
@@ -28,48 +30,29 @@ export function FinalCTASection() {
               {"Download Kyuva. Add your first script. Hit Play. That's it."}
             </p>
 
-            {/* Platform Download Buttons */}
+            {/* Download Button */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Button size="lg" className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-semibold px-6">
-                <Apple className="mr-2 h-5 w-5" />
-                Mac
-              </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/20 bg-transparent text-white hover:bg-white/5 px-6"
+                className="bg-[#22c55e] hover:bg-[#16a34a] text-[#0a0a0a] font-semibold px-8 py-6 text-lg"
+                asChild
               >
-                <Monitor className="mr-2 h-5 w-5" />
-                Windows
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 bg-transparent text-white hover:bg-white/5 px-6"
-              >
-                <Smartphone className="mr-2 h-5 w-5" />
-                iOS
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 bg-transparent text-white hover:bg-white/5 px-6"
-              >
-                <Smartphone className="mr-2 h-5 w-5" />
-                Android
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 bg-transparent text-white hover:bg-white/5 px-6"
-              >
-                <Chrome className="mr-2 h-5 w-5" />
-                Chrome Extension
+                <a href={DMG_DOWNLOAD_URL}>
+                  <Apple className="mr-2 h-5 w-5" />
+                  Download for Mac — Free
+                </a>
               </Button>
             </div>
 
+            {/* Coming Soon */}
+            <p className="text-[#888] text-sm mb-8">
+              Windows, iOS & Android coming soon
+            </p>
+
             {/* Trust Text */}
-            <p className="text-[#888] text-sm">Join 1,000+ creators and professionals</p>
+            <p className="text-[#666] text-sm">
+              No account required • 100% free tier • Upgrade anytime
+            </p>
 
             {/* MacBook Mockup */}
             <motion.div
